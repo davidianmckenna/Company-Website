@@ -1,0 +1,197 @@
+/* Universal Styles*/
+
+html {
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    background-color: white;
+   
+    color: rgb(77, 77, 77);
+
+}
+
+a{
+    color: rgb(77, 77, 77);
+    text-decoration: none;
+    padding: 1rem;
+}
+
+h1 {
+    font-family: "comfortaa", helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 3rem;
+}
+
+h2{
+    font-family: "comfortaa", helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 2rem; 
+}
+
+
+
+
+.grid {
+    display: grid;
+    grid-template:  1fr 7fr 6fr 4fr 3fr 1fr/repeat(12,1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    justify-content: center;
+    grid-auto-rows: minmax(300px, auto);
+    
+}
+
+header {
+    grid-area: 1/1/2/12;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 4;
+    
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 4;
+    
+    
+}
+
+#logo img {
+    width: 100px;
+    opacity: 0.8;
+    flex-shrink: 2;
+}
+#logo h1 {
+    
+    flex-shrink: 20;
+}
+
+ #banner {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+    grid-area: 2/1/3/13;
+    background-image: url(../images/beer-banner.jpg);
+    color: white;
+    letter-spacing: 0.4rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+
+    margin: 0;
+}
+
+nav {
+    flex-shrink: 4;
+}
+
+
+
+/*Products section*/
+
+#products {
+    
+    grid-area: 3/1/4/13;
+}
+
+
+#products .container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    
+    
+}
+
+#products .image-container {
+
+display:flex;
+flex-direction: column;
+align-content: center;
+align-items: center;
+margin: 5rem;
+}
+
+.image-container img {
+    width: 200px;
+   
+}
+
+/*Staff section*/
+
+#staff {
+    grid-area: 4/1/5/13;
+   
+}
+#staff .container {
+    background-image: url(../images/kegs.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+    
+
+}
+
+#staff .image-container {
+
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin: 2rem;
+    backdrop-filter: blur(2px);
+    color: rgb(7, 7, 7);
+    padding: 2rem;
+    font-weight: lighter;
+    letter-spacing: 0.15rem;
+    
+  
+    
+    }
+    
+    #info {
+        
+        grid-area: 5/1/6/13;
+        
+    }
+
+    #info .container {
+
+        justify-content: space-around;
+        justify-items: center;
+        align-content: center;
+        display: flex;
+        flex-wrap:wrap
+    }
+    
+
+    
+    
+    footer {
+        grid-area: 6/1/7/13;
+        font-size: 12px;
+        text-align: left;
+    }
+
+
+    /* Smaller screens */
+   
+        
+
+    
+    @media only screen and (max-width: 1032px) {
+        #logo h1 {
+            display:none;
+    
+        }
+
+
+    }
